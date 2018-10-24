@@ -1,0 +1,28 @@
+{
+	"videos" : [
+	{
+		"name":"Centimeters",
+		"author":"Takashi",
+		"videourl":"thumbnails/succes.jpg",
+		"thumbnail":"thumbnails/centimeters.jpg",
+		"description":"testdescription"
+	},
+	{
+		"name":"Nature",
+		"author":"Bamischijf",
+		"videourl":"thumbnails/succes.jpg",
+		"thumbnail":"thumbnails/nature1.jpg",
+		"description":"testdescription"
+	},
+	{
+		"name":"Nightsky",
+		"author":"Frits",
+		"videourl":"thumbnails/succes.jpg",
+		"thumbnail":"thumbnails/nightsky.jpg",
+		"description":"testdescription"
+	},
+	{
+		"thumbnail":"thumbnails/succes1.jpg"
+	}
+]
+}

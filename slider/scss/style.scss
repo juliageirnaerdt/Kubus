@@ -1,0 +1,59 @@
+.slider {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  
+  // Add transition
+  transition: 0.6s ease;
+  
+  // Move slides off to the left  by default
+  transform: translate(-100%, 0);
+  
+  // Set active slide to be in the viewport
+  &.active {
+    transform: translate(0, 0);
+    
+    // Use sibling selector to position all slides after the active slide to the right
+    & ~ .slide {
+      transform: translate(100%, 0);
+    }
+  }
+}
+
+
+
+// The non important stuff
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+.slide {
+  text-align: left;
+  background: tomato;
+  color: white;
+  border: 10px solid skyblue;
+  padding: 30px;
+}
+
+button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 0;
+  background: lightgreen;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+}
