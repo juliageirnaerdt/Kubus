@@ -1,12 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-  <meta charset="utf-8">
-  <title>Kubus</title>
+  <meta charset="UTF-8-8">
+  <title>Simplest Infinite Slider</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" charset="UTF-8">
+
 </head>
 
 <body>
 
-  <script src="js/kubus.js"></script>
+<div class="slider">
+  <div class="slide">
+    <img id="prev" src="">
+  </div>
+
+    <div class="slide active">
+      <img id="test" src="">
+    </div>
+
+      <div class="slide">
+        <img id="next" src="">
+      </div>
+</div>
+
+<button id="previous">Previous</button>
+<button id="next">Next</button>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script  src="/js/index.js"></script>
 
 
-  </html>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:8000');
+  socket.on('socketconnection', function (data) {
+    console.log(data);
+    socket.emit('greetserver', { Client: 'Hello' });
+  });
+  socket.on('nextslide', function (data) {
+      nextSlide();
+  });
+</script>
+
+</body>
+
+</html>
